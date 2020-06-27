@@ -10,58 +10,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            /*Point p1 = new Point(1, 3, '*');        
+            Point p1 = new Point(1, 3, '*');        
             p1.Draw();
 
             Point p2 = new Point(4, 5, '#');         
             p2.Draw();
 
-            Console.ReadKey();*/
-            int x = 1;
-            Func1(x);
-            Console.WriteLine("Call Func1. x = " + x);
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
 
-            x = 1;
-            Func2(x);
-            Console.WriteLine("Call Func2. x = " + x);
+            foreach (int i in numList)
+            {
+                Console.WriteLine(i);
+            }
 
-            Point p1 = new Point(1, 3, '*');
-            Move(p1, 10, 10);
-            Console.WriteLine("Call Move. p1.x = " + p1.x);
+            numList.Remove(0);
 
-            Point p2 = new Point(4, 5, '#');
-            p1 = p2;
-            p2.x = 8;
-            p2.y = 8;
-            Console.WriteLine("p1 = p2. p1.x = " + p1.x + ", p1.y = " + p1.y);
-
-            p1 = new Point(1, 3, '*');
-            Update(p1);
-            Console.WriteLine("Call Update. p1.x = " + p1.x + ", p1.y = " + p1.y);
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
 
             Console.ReadKey();
       
-          
-
-
         }
-        public static void Func1(int value)
-        {
-        }
-        public static void Func2(int value) {
-            value = value + 1;
-        }
-        public static void Func3(int x) {
-            x = x + 1;
-        }
-        public static void Move(Point p, int dx, int dy) {
-            p.x = p.x + dx;
-            p.y = p.y + dy;
-        }
-        public static void Update(Point p) {
-            p = new Point();
-        }
-       
-   
     }
 }
