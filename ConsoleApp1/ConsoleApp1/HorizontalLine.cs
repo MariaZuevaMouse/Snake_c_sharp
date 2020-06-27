@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class HorizontalLine
-    {
-        List<Point> pList;
-
+    class HorizontalLine : Figure
+    {        
         public HorizontalLine(int xLeft, int xRight, int y, char sym)
         {
             pList = new List<Point>();
@@ -21,13 +19,6 @@ namespace ConsoleApp1
             }
 
         }
-        public void Draw()
-        {
-            foreach(Point p in pList)
-            {
-                p.Draw();                
-            }
-        }
-     
+            
     }
 }

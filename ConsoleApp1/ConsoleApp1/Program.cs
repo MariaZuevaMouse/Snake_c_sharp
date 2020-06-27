@@ -10,17 +10,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');        
-            p1.Draw();
-
-            Point p2 = new Point(4, 5, '#');         
-            p2.Draw();
-
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.Draw();
-
-            VerticalLine vLine = new VerticalLine(5, 10, 15, '$');
-            vLine.Draw();
+            //Console.SetBufferSize(80, 24);
+                     
+            HorizontalLine upline = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '$');
+            upline.Draw();
+            downline.Draw();
+            leftline.Draw();
+            rightLine.Draw();
 
             Console.ReadKey();
       
