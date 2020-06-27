@@ -16,21 +16,11 @@ namespace ConsoleApp1
             Point p2 = new Point(4, 5, '#');         
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
+            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
+            line.Draw();
 
-            foreach (int i in numList)
-            {
-                Console.WriteLine(i);
-            }
-
-            numList.Remove(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
+            VerticalLine vLine = new VerticalLine(5, 10, 15, '$');
+            vLine.Draw();
 
             Console.ReadKey();
       
