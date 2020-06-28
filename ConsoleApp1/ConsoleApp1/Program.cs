@@ -11,16 +11,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Console.SetBufferSize(80, 24);
-                     
-           /* HorizontalLine upline = new HorizontalLine(0, 78, 0, '+');
-            HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
-            VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
-            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
-            upline.Draw();
-            downline.Draw();
-            leftline.Draw();
-            rightLine.Draw();*/
+            Console.SetWindowSize(80, 25);                  
+          
             Wall walls = new Wall(80, 25);
             walls.Draw();
 
@@ -57,10 +49,24 @@ namespace ConsoleApp1
                 }
             }
 
-
-
-           // Console.ReadKey();
+            WriteGameOver();
+            Console.ReadKey();
       
+        }
+        static void WriteGameOver()
+        {
+            int xOffset = 20;
+            int yOffset = 8;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            //Console.SetCursorPosition(xOffset, yOffset);
+            WriteFinishText("==================================", xOffset, yOffset);
+            WriteFinishText("     Game Over friend :)!!!", xOffset, yOffset +1);
+            WriteFinishText("==================================", xOffset, yOffset +2);
+        }
+        static void WriteFinishText(String text, int xOffset, int yOffset)
+        {
+            Console.SetCursorPosition(xOffset, yOffset);
+            Console.WriteLine(text);
         }
     }
 }
