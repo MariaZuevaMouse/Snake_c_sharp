@@ -51,7 +51,16 @@ namespace ConsoleApp1
             else if (key == ConsoleKey.UpArrow)
                 direction = Direction.UP;
         }
-
+        internal bool IsHitTail()
+        {
+            var head = pList.Last();
+            for(int i = 0; i<pList.Count- 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
+        }
         internal bool Eat(Point food)
         {
             Point head = GetNextPoint();
